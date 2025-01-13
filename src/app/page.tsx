@@ -1,10 +1,36 @@
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
+import i18next from "../i18n";
+import { Card } from "antd";
+import ShapeControl from "@/components/ShapeControl";
+import { useRouter } from "next/navigation";
+// import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  // const { t, i18n } = useTranslation();
+  const [lang, setLang] = useState("en");
+  const router = useRouter();
+  const changeLanguage = (lang: string) => {
+    i18next.changeLanguage(lang); // Change the language to the selected one
+    setLang(lang);
+  };
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
+      <Card
+        title="Shape Control"
+        style={{ marginBottom: "20px" }}
+        onClick={() => router.push("/frontend-react")}
+      >
+        {/* <ShapeControl /> */}
+      </Card>
+      <button onClick={() => changeLanguage("en")}>English</button>
+      <button onClick={() => changeLanguage("th")}>Thai</button>
+      <h1>{i18next.t("greeting")}</h1>
+      <h1>{i18next.t("greeting2")}</h1>
+      {/* <button onClick={() => changeLanguage('th')}>Thai</button>  */}
+      {/* <main className={styles.main}>
         <Image
           className={styles.logo}
           src="https://nextjs.org/icons/next.svg"
@@ -89,7 +115,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }
