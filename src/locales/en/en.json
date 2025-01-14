@@ -1,4 +1,12 @@
 {
-    "greeting": "Hello",
-    "greeting2": "Hello2"
-  }
+  "en":"EN",
+  "th":"TH",
+  "titleTest1": "Test 1",
+  "titleTest2": "Test 2",
+  "titleTest3": "Test 3",
+  "descriptionTest1": "Layout & Style",
+  "descriptionTest2": "Connect API",
+  "descriptionTest3": "Form & Table",
+  "Move shape": "Move shape",
+  "Move position": "Move position"
+}

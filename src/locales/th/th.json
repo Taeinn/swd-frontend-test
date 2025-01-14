@@ -1,4 +1,12 @@
 {
-    "greeting": "สวัสดี",
-    "greeting2": "สวัสดี2"
-  }
+  "en":"อังกฤษ",
+  "th":"ไทย",
+  "titleTest1": "แบบทดสอบที่ 1",
+  "titleTest2": "แบบทดสอบที่ 2",
+  "titleTest3": "แบบทดสอบที่ 3",
+  "descriptionTest1": "การจัดการหน้าเว็บ",
+  "descriptionTest2": "การเชื่อมต่อ API",
+  "descriptionTest3": "การจัดการหน้าฟอร์ม",
+  "Move shape": "เลื่อนรูปแบบ",
+  "Move position": "เปลี่ยนตำแหน่ง"
+}

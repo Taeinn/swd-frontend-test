@@ -1,0 +1,104 @@
+@mixin triangle($direction, $size, $color) {
+  width: 0;
+  height: 0;
+
+  @if $direction == top {
+    border-left: $size - ($size/2.5) solid transparent;
+    border-right: $size - ($size/2.5) solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $direction == bottom {
+    border-left: $size - ($size/2.5) solid transparent;
+    border-right: $size - ($size/2.5) solid transparent;
+    border-top: $size solid $color;
+  } @else if $direction == left {
+    border-top: $size - ($size/2.5) solid transparent;
+    border-bottom: $size - ($size/2.5) solid transparent;
+    border-right: $size solid $color;
+  } @else if $direction == right {
+    border-top: $size - ($size/2.5) solid transparent;
+    border-bottom: $size - ($size/2.5) solid transparent;
+    border-left: $size solid $color;
+  }
+}
+// Circle
+@mixin circle($size, $color) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+  border-radius: 50%;
+}
+
+// Horizontal Oval
+@mixin oval($width, $height, $color) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  border-radius: 50%;
+}
+
+// Trapezoid
+@mixin trapezoid($top-width, $bottom-width, $height, $color) {
+  width: $bottom-width;
+  height: 0;
+  border-bottom: $height solid $color;
+  border-left: calc(($bottom-width - $top-width) / 2) solid transparent;
+  border-right: calc(($bottom-width - $top-width) / 2) solid transparent;
+}
+
+// Rectangle
+@mixin rectangle($width, $height, $color) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+}
+
+// Parallelogram
+@mixin parallelogram($width, $height, $skew, $color) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  transform: skew($skew);
+}
+
+// Square
+@mixin square($size, $color) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+}
+// Usage
+.triangle-top {
+  @include triangle(top, 5vw, #827f7a);
+}
+.triangle-bottom {
+  @include triangle(bottom, 5vw, #827f7a);
+}
+.triangle-left {
+  @include triangle(left, 5vw, #827f7a);
+}
+.triangle-right {
+  @include triangle(right, 5vw, #827f7a);
+}
+.circle {
+  @include circle(6vw, #827f7a);
+}
+
+.oval {
+  @include oval(13vw, 6vw, #827f7a);
+}
+
+.trapezoid {
+  @include trapezoid(8vw, 13vw, 6vw, #827f7a);
+}
+
+.rectangle {
+  @include rectangle(13vw, 6vw, #827f7a);
+}
+
+.parallelogram {
+  @include parallelogram(11vw, 6vw, 20deg, #827f7a);
+}
+
+.square {
+  @include square(6vw, #827f7a);
+}
