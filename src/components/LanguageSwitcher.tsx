@@ -1,5 +1,5 @@
 "use client";
-import { Button, Select } from "antd";
+import { Select } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../store/slices/languageSlice";
 import { RootState } from "../store/store";
@@ -20,13 +20,13 @@ const LanguageSwitcher = () => {
         display: "flex",
         width: "100%",
         justifyContent: "flex-end",
-        padding: "10px",
+        padding: "20px 10px 10px 10px",
       }}
     >
       <Select
         value={locale}
-        style={{ width: 75,borderRadius: 0 }}
-        // dropdownStyle={{ borderRadius: 0 }}  
+        style={{ width: 75, borderRadius: 0 }}
+        // dropdownStyle={{ borderRadius: 0 }}
         onChange={(e) => changeLanguage(e)}
         options={[
           { value: "en", label: translate("en", locale) },

@@ -1,8 +1,7 @@
 "use client";
 import { RootState } from "@/store/store";
 import { translate } from "@/utils/translation";
-import { Button, Card, Col, Row } from "antd";
-import { useTranslation } from "react-i18next";
+import { Col, Row } from "antd";
 import { useSelector } from "react-redux";
 import "../../styles/buttonShapes.scss";
 import "../../styles/frontendReact.scss";

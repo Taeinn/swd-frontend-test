@@ -1,5 +1,4 @@
 "use client";
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 // import "./globals.css";
 import "../styles/globals.scss";
@@ -45,7 +44,6 @@ export default function RootLayout({
         }}
       >
         <Provider store={store}>
-          {/* <Navigation /> */}
           <LanguageSwitcher />
           {children}
         </Provider>

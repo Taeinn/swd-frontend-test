@@ -1,5 +1,5 @@
 // Variables for background and foreground colors
-@import "variables"; 
+@import "variables";
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -40,11 +40,15 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.titleText {
-  padding: 20px;
-  line-height: 1.15;
+.fontPrimaryColor {
   color: $black-color;
 }
+.titleText {
+  @extend .fontPrimaryColor;
+  padding: 20px;
+  line-height: 1.15;
+}
+
 
 // Dark mode color-scheme setting
 @media (prefers-color-scheme: dark) {
@@ -53,10 +57,22 @@ a {
   }
 }
 .ant-select-selector {
-  border-radius: 0 !important; // Removes border-radius for the input box
+  // border-radius: 0 !important; // Removes border-radius for the input box
   border-color: transparent !important;
 }
-
-.ant-select-dropdown {
-  border-radius: 0 !important; // Removes border-radius for the dropdown
+.ant-pagination-item {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
+
+/* Add border and background when the page number is active */
+.ant-pagination-item-active {
+  border: 1px solid #1890ff !important; /* Blue border */
+  background-color: #e6f7ff !important; /* Light blue background */
+  color: #1890ff !important; /* Blue text */
+  font-weight: bold;
+}
+// .ant-select-dropdown {
+//   border-radius: 0 !important; // Removes border-radius for the dropdown
+// }

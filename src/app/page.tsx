@@ -1,14 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import styles from "./page.module.css";
-import i18next from "../i18n";
+import React from "react";
 import { Card } from "antd";
-import ShapeControl from "@/components/ShapeControl";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { translate } from "@/utils/translation";
 
 export default function Home() {
